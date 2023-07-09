@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+        <div id="calculator">
+            <input type="text" name="user-input" id="user-input" disabled>
+            <table id="keypad">
+                <tr>
+                    <th><button type="button" id="clear" class="normal key">AC</button></th>
+                    <th><button type="button" id="sign" class="normal key">+/-</button></th>
+                    <th><button type="button" id="percentage" class="normal key">%</button></th>
+                    <th><button type="button" id="div" class="operator key">/</button></th>
+                </tr>
+                <tr>
+                    <th><button type="button" id="dig_7" class="normal key">7</button></th>
+                    <th><button type="button" id="dig_8" class="normal key">8</button></th>
+                    <th><button type="button" id="dig_9" class="normal key">9</button></th>
+                    <th><button type="button" id="mul" class="operator key">*</button></th>
+                </tr>
+                <tr>
+                    <th><button type="button" id="dig_4" class="normal key">4</button></th>
+                    <th><button type="button" id="dig_5" class="normal key">5</button></th>
+                    <th><button type="button" id="dig_6" class="normal key">6</button></th>
+                    <th><button type="button" id="sub" class="operator key">-</button></th>
+                </tr>
+                <tr>
+                    <th><button type="button" id="dig_1" class="normal key">1</button></th>
+                    <th><button type="button" id="dig_2" class="normal key">2</button></th>
+                    <th><button type="button" id="dig_3" class="normal key">3</button></th>
+                    <th><button type="button" id="add" class="operator key">+</button></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="button" id="dig_0" class="normal key">0</button></th>
+                    <th><button type="button" id="dot" class="normal key">.</button></th>
+                    <th><button type="button" id="equal" class="equal key">=</button></th>
+                </tr>
+           </table>
+
+        </div>
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

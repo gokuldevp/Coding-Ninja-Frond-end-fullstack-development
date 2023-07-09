@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    width: 32%;
+    height: 300px; 
+    display: inline-block;
+}
+
+#red {
+    background-color: #ff8989;
+}
+
+#green {
+    background-color: #88f7ce;
+}
+
+#purple {
+    background-color: #e29df2;
+}
+
+@media (max-width: 600px){
+    div {
+        display: flex;
+        width: 100%;
+        marging: 0;
+        padding: 0;
+    }
+}

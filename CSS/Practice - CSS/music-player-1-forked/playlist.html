@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- it sets the width of the viewport to the width of the device screen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Giving Title to the file -->
+    <title>Music Player</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/playliststyle.css" />
+
+    <!-- Adding Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Creating Navigation part -->
+    <nav>
+      <!-- Adding Logo -->
+      <a href="index.html"
+        ><div id="music-player-logo">
+          <!-- <a href="#"> -->
+          <img id="music-logo-image" src="images/logo.png" alt="Logo" />
+          <div id="music-player-name">Music<br /><b>Player</b></div>
+        </div>
+      </a>
+
+      <!-- Adding Search Form -->
+      <form action="#" method="post">
+        <input type="text" name="search" id="search" placeholder="search..." />
+
+        <!-- Adding submit button -->
+        <button type="submit" id="search-button">
+          <!-- Adding Search icon -->
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <!-- Adding Notification button -->
+      <button id="notification">
+        <!-- Adding Notification Icon -->
+        <i class="fas fa-bell search-icon"></i>
+      </button>
+
+      <!-- Adding Profile image/button -->
+      <aside class="dropdown">
+        <button id="user"></button>
+        <ul class="dropdown-menu">
+          <li><button>My Profile</button></li>
+          <li><button>Logout</button></li>
+        </ul>
+      </aside>
+    </nav>
+
+    <main>
+      <!--Artist Template-->
+      <div id="artist-template">
+        <div id="artist-image"></div>
+        <!--Artist Details
+      >-->
+        <div id="artist-details">
+          <!--Artist Title-->
+          <div id="artist-title">
+            <div>
+              <b>Dileep</b>
+              <br />
+              <artist-type>Actor</artist-type>
+            </div>
+            <followers>4M followers</followers>
+          </div>
+          <!--End of Artist Title-->
+          <!--Artist Intro-->
+          <div id="artist-intro">
+            Dileep began his career in the entertainment industry as a mimicry
+            artist and later ventured into acting. He made his acting debut in
+            1991 with the film "Ennodu Ishtam Koodamo" but gained recognition
+            through his role in the movie "Manathe Kottaram" (1994). Since then,
+            he has acted in numerous Malayalam films and has established himself
+            as one of the leading actors in the industry.
+          </div>
+          <!--End of Artist Intro-->
+          <!--Miscellaneous Buttons-->
+          <div id="artist-buttons">
+            <div>
+              <a href="#player" id="playall-button">Play All</a>
+            </div>
+            <div id="follow-button">
+              <a id="playall-button">Follow</a>
+            </div>
+          </div>
+          <div id="tracks">
+            247 Tracks | 128 Albums
+          </div>
+          <!--End of miscellaeous buttons-->
+        </div>
+        <!--End of artist details-->
+      </div>
+      <!--End of artist template-->
+      <!--Begining of artist songs-->
+      <div id="artist-songs">
+        <!--Song 1-->
+        <div id="song">
+          <div id="song-number">
+            01
+            <img src="images/new-release1.jpg" alt="album image" />
+            <div id="song-details">
+              Kakka Thuri na Thonunna
+              <br />
+              <author>Jakithesh</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 1-->
+        <!--Song 2-->
+        <div id="song">
+          <div id="song-number">
+            02
+            <img src="images/latestimg1.jpg" alt="album image" />
+            <div id="song-details">
+              Sugamamma Kenava
+              <br />
+              <author>Dileep</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 2-->
+        <!--Song 3-->
+        <div id="song">
+          <div id="song-number">
+            03 <img src="images/latestimg4.jpg"album image">
+            <div id="song-details">
+              Oru Maduar Kenava
+              <br />
+              <author>Mohalal</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 3-->
+        <!--Song 4-->
+        <div id="song">
+          <div id="song-number">
+            04
+            <img src="images/latestimg6.jpg" alt="album image" />
+            <div id="song-details">
+              Babuvetta
+              <br />
+              <author>Pramenasir</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 4-->
+        <!--Song 5-->
+        <div id="song">
+          <div id="song-number">
+            05
+            <img src="images/new-release2.jpg" alt="album image" />
+            <div id="song-details">
+              Orma unddo eee mugam
+              <br />
+              <author>Suresh Gopi</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 5-->
+        <!--Song 6-->
+        <div id="song">
+          <div id="song-number">
+            06
+            <img src="images/new-release3.jpg" alt="album image" />
+            <div id="song-details">
+              Chingga masam
+              <br />
+              <author>Dileep</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <!--End of Song 6-->
+        <!--Song 7-->
+        <div id="song">
+          <div id="song-number">
+            07
+            <img src="images/new-release3.jpg" alt="album image" />
+            <div id="song-details">
+              Hello Wrong number
+              <br />
+              <author>Manju usha</author>
+            </div>
+          </div>
+
+          <div id="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <!--End of Song 7-->
+    </main>
+    <!--End of main section-->
+
+    <!--Begining of Aside Section-->
+    <aside>
+      <div id="aside-header-1">
+        Similar Artists
+        <x>View All</x>
+      </div>
+      <!--Similar artist-->
+      <div id="similar-artist">
+        <div id="artist-img" class="latest-img6"></div>
+        <div id="song-details">
+          Dileep
+          <br />
+          <author>Pop Artist</author>
+        </div>
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+
+      <div id="similar-artist">
+        <div id="artist-img" class="latest-img5"></div>
+        <div id="song-details">
+          Mohalal
+          <br />
+          <author>Pop Artist</author>
+        </div>
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+
+      <div id="similar-artist">
+        <div id="artist-img" class="latest-img4"></div>
+        <div id="song-details">
+          Mommutty
+          <br />
+          <author>Pop Artist</author>
+        </div>
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <!--End of Similar artist-->
+      <div id="aside-header-2">
+        Recently Played
+        <x>View All</x>
+      </div>
+      <!--Recently Played Songs-->
+      <!--Song 1-->
+      <div id="song">
+        <div id="song-number">
+          01
+          <img src="images/new-release3.jpg" alt="album image" />
+          <div id="song-details">
+            Oru Mugam vandu pataya
+            <br />
+            <author>Mohalal</author>
+          </div>
+        </div>
+
+        <div id="icons">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <!--ENd of song 1-->
+      <!--Song 2-->
+      <div id="song">
+        <div id="song-number">
+          02
+          <img src="images/new-release3.jpg" alt="album image" />
+          <div id="song-details">
+            Oh saina
+            <br />
+            <author>Dileep</author>
+          </div>
+        </div>
+
+        <div id="icons">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <!--End of song 2-->
+      <!--Song 3-->
+      <div id="song">
+        <div id="song-number">
+          03
+          <img src="images/new-release1.jpg" alt="album image" />
+          <div id="song-details">
+            yan kungu urankiko
+            <br />
+            <author>Kuttan Pella</author>
+          </div>
+        </div>
+
+        <div id="icons">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <!--End of song 3-->
+      <!--Song 4-->
+      <div id="song">
+        <div id="song-number">
+          04
+          <img src="images/latestimg5.jpg" alt="album image" />
+          <div id="song-details">
+            Kulayala kulayal
+            <br />
+            <author>Srinivasan</author>
+          </div>
+        </div>
+
+        <div id="icons">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <!--End of song 4-->
+      <!--Song 5-->
+      <div id="song">
+        <div id="song-number">
+          05
+          <img src="images/new-release3.jpg" alt="album image" />
+          <div id="song-details">
+            Oru Chempaner katenda
+            <br />
+            <author>Mukesh</author>
+          </div>
+        </div>
+
+        <div id="icons">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <!--End of song 5-->
+      <!--End of recently played songs-->
+    </aside>
+    <!--End of aside-->
+
+    <audio class="sticky-element" id="player" controls>
+      <source src="audio/music1.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+  <!--End of body section-->
+</html>
+<!--End of html code-->

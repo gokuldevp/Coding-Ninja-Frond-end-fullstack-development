@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- it sets the width of the viewport to the width of the device screen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Giving Title to the file -->
+    <title>Music Player</title>
+
+    <!-- Adding css style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Adding Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    
+    <!-- Creating Navigation part -->
+    <nav>
+         <!-- Adding Logo -->
+         <div id="music-player-logo">
+         <!-- <a href="#"> -->
+                <img id="music-logo-image" src="images/logo.png" alt="Logo">
+            <div id="music-player-name">
+                Music<br/><b>Player</b>
+            </div>
+        <!-- </a> -->
+        </div>
+
+                
+        <!-- Adding Search Form -->
+        <form action="#" method="post">
+            <input type="text" name="search" id="search" placeholder="search...">
+            
+            <!-- Adding submit button -->
+            <button type="submit" id="search-button">
+                <!-- Adding Search icon -->
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <!-- Adding Notification button -->
+        <button id="notification">
+            <!-- Adding Notification Icon -->
+            <i class="fas fa-bell search-icon"></i>
+        </button>
+
+        <!-- Adding Profile image/button -->
+        <aside class="dropdown">
+            <button id="user"></button>
+            <ul class="dropdown-menu">
+                <li><button>My Profile</button></li>
+                <li><button>Logout</button></li>
+            </ul>
+        </aside>
+    </nav>
+    
+    <!-- Adding new release -->
+    <main>
+        <Section id="new-releases">
+            <a href="#"><img src="images/new-release1.jpg" alt="new-release1"></a>
+            <a href="#"><img src="images/new-release2.jpg" alt="new-release2"></a>
+            <a href="#"><img src="images/new-release3.jpg" alt="new-release3"></a>   
+        </Section>
+
+        <!-- Adding latest release -->
+        <section id="latest-release">
+            <h2 class="side-space">Latest Release</h2>
+
+            <div class="song-list">
+            <!-- Adding song -->
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img1"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Mundiri Paadam</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">3:45</p>
+                    </div>
+                   
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img2"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Ente Ellam Ellam Alle</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">5:33</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img3"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Kaadaniyum</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">3:58</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img4"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Madhura Manohara Moham</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:08</p>
+                    </div>
+                   
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img5"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Vaashi</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:06</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img6"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Babuvetta</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:17</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+<!-- Adding Popular Artists -->
+<div id="popular-artists" class="side-space">
+			 
+    <h3>Popular Artists</h3>
+    
+    <div id="popular-artist-list">
+        <div id="popular-artists-image-2" class="image-dia">
+            <div id="popular-artists-text" class="hide">
+                <a href="playlist.html">
+                   Dileep
+               </a>
+            </div>
+        </div>
+        
+        
+        <div id="popular-artists-image-3" class="image-dia">
+             <div id="popular-artists-text" class="hide">
+                <a href="playlist.html">
+                   mohalal
+               </a>
+            </div>
+        </div>
+        
+        
+        <div id="popular-artists-image-4" class="image-dia">
+           <div id="popular-artists-text" class="hide">
+                <a href="playlist.html">
+                  nivitha
+               </a>
+            </div>
+        </div>
+        
+        
+        <div id="popular-artists-image-5" class="image-dia">
+           <div id="popular-artists-text" class="hide">
+                <a href="playlist.html">
+                   Sanithya
+               </a>
+            </div>
+        </div>
+        
+        
+        <div id="popular-artists-image-6" class="image-dia">
+          <div id="popular-artists-text" class="hide">
+                <a href="playlist.html">
+                   Abijith
+               </a>
+            </div>
+        </div>
+        
+   </div>
+   
+</div class="side-space">
+
+
+        <!-- Adding latest release -->
+        <section id="Malayalam-release">
+            <h2 class="side-space">Latest Release</h2>
+
+            <div class="song-list">
+            <!-- Adding song -->
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img1"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Mundiri Paadam</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">3:45</p>
+                    </div>
+                   
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img2"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Ente Ellam Ellam Alle</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">5:33</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img3"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Kaadaniyum</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">3:58</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img4"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Madhura Manohara Moham</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:08</p>
+                    </div>
+                   
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img5"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Vaashi</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:06</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="latest-item side-space song-items">
+                    <!-- Adding image and song details -->
+                    <a href="#player" class="song-img hide-on-hover latest-img6"><i class="fas fa-play"></i></a>
+                    <div class="song-details">
+                        <h6 class="song-name">Babuvetta</h6>
+                        <p class="date">June, 2023</p>
+                        <p class="time">4:17</p>
+                    </div>
+                    
+                    <!-- Adding dropdown -->
+                    <aside class="dropdown">
+                        <button class="music-button"><i class="fas fa-chevron-circle-down"></i></button>
+                        <ul class="music-dropdown">
+                            <li><button><i class="fas fa-play"></i>&nbsp;Play Now</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Queue</button></li>
+                            <li><button><i class="fas fa-plus"></i>&nbsp;Add to Favourites</button></li>
+                            <li><button><i class="fas fa-exclamation-circle"></i>&nbsp;Get Info</button></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+ 
+ 
+<!-- Adding Queue -->
+    <aside id="playlist-queue">
+        
+        <div id="aside-header">
+         
+          <div id="aside-title">
+            Queue
+          </div>
+       
+       
+         <div id="aside-dropdown">
+             <form>
+                 <select>
+                     <option id="Queue" label="Queue">Queue</option>
+                     <option id="Playlist" lable="Playlist"><a href="MusicPlayerHomePage2.html">Playlist</a></option>
+                 </select>
+             </form>
+         </div>
+      
+     </div>
+     
+     
+     
+         <div id="queue-item">
+             
+             <div id="queue-item-img" ></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+         
+         <div id="queue-item">
+             
+             <div id="queue-item-img"></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+         
+         <div id="queue-item">
+             
+             <div id="queue-item-img"></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+         
+         <div id="queue-item">
+             
+             <div id="queue-item-img"></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+         
+         <div id="queue-item">
+             
+             <div id="queue-item-img"></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+         
+         <div id="queue-item">
+             
+             <div id="queue-item-img"></div>
+                 
+             <div id="queue-item-title">
+              <b>Babuvetta</b>
+              <p style="color:lightgrey;">Dileep</p>
+          </div>
+          
+          
+          <div id="queue-favourite">
+              <i class="far fa-heart"></i>
+          </div>
+          
+         </div>
+         
+</aside>
+
+
+<audio class="sticky-element" id="player" controls>
+    <source src="audio/music1.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

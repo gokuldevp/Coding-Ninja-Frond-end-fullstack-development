@@ -1,0 +1,39 @@
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator {
+    height: 500px;
+    width: 500px;
+    background-color: pink;
+}
+
+#user-input {
+    width: 493px;
+    height: 120px;
+    font: 2em sans-serif;
+    color: black;
+}
+
+button {
+    width: 120px;
+    height: 70px;
+    border: 0;
+    font-size: x-large;
+}
+
+#dig_0 {
+    width: 240px;
+}
+
+.normal {
+    background-color: white;
+}
+
+.operator, .equal-key {
+    background-color: brown;
+}

@@ -1,0 +1,20 @@
+
+p:active{
+	background-color: cyan;
+}
+
+a:visited{
+	color: rgb(164, 219, 61);
+}
+
+a:link{
+	color: rgb(219, 61, 193);
+}
+
+a:active{
+	color: red;
+}
+
+a:target{
+	color:yellow;
+}
