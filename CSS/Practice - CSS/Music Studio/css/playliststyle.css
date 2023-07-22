@@ -197,7 +197,7 @@ form {
 
 /* Basic styling for the player */
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     margin-bottom: 90%;;
     width: 100%;
