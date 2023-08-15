@@ -5,12 +5,26 @@ const tasksCounter = document.getElementById('tasks-counter');
 
 console.log('Working');
 
+let fetchToDos = () => {
+    // GET Requret
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then((response) => {
+        return response.json();
+    }).then((data) => {
+        tasks = data.slice(0, 20);
+        renderList()
+    }).catch((error) => {
+        console.log(error);
+    })
+
+}
+
 let addTaskToDOM = (task) => {
     // Function to add a new task to the DOM
     const li = document.createElement('li');
     li.innerHTML = `          
-    <input type="checkbox" id="${task.id}" ${task.done ? 'checked':''} class="custom-checkbox">
-    <label for="${task.id}">${task.text}</label>
+    <input type="checkbox" id="${task.id}" ${task.completed ? 'checked':''} class="custom-checkbox">
+    <label for="${task.id}">${task.title}</label>
     <img src="images/delete_btn.jfif" class="delete" data-id="${task.id}" />
     `
     taskList.append(li)
@@ -27,11 +41,11 @@ function renderList () {
 function markTaskAsComplete (taskId) {
     // function to mark the task as complete/uncomplete
     const task = tasks.filter((task)=>{
-        return task.id===taskId;
+        return task.id=== Number(taskId);
     });
     if (task.length>0) {
         const currentTask = task[0];
-        currentTask.done = !currentTask.done;
+        currentTask.completed = !currentTask.completed;
         renderList();
         showNotification('Task toggled successfully');
         return;
@@ -42,7 +56,7 @@ function markTaskAsComplete (taskId) {
 function deleteTask(taskId) {
     // Function to delete a task from the list
     const newTasks = tasks.filter((task) => {
-        return task.id !== taskId;
+        return task.id !== Number(taskId);
     });
 
     tasks = newTasks;
@@ -55,7 +69,7 @@ function addTask (task) {
     if(task){
         tasks.push(task);
         renderList();
-        showNotification("Task '" + task.text + "' is added to the list.")
+        showNotification("Task '" + task.title + "' is added to the list.")
         tasksCounter.innerText = tasks.length
     }
 }
@@ -75,9 +89,9 @@ function handleInputKeyPress(event) {
             return;
         }
         const task = {
-            text,
-            id: Date.now().toString(),
-            done: false
+            title: text,
+            id: Date.now(),
+            Completed: false
         }
 
         addTask(task);
@@ -101,5 +115,6 @@ let handleClickListener = (e) => {
     }
 }
 
+fetchToDos();
 addTaskInput.addEventListener("keypress",handleInputKeyPress);
 document.addEventListener("click", handleClickListener)
