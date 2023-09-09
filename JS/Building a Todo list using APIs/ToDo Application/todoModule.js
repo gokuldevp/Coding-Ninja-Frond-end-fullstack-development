@@ -1,4 +1,4 @@
-(function(){
+var ToDoListApp = (function(){
     let tasks = [];
     let authorName = 'Gokul Dev P';
     const taskList = document.getElementById('list');
@@ -149,7 +149,13 @@
         addTaskInput.addEventListener("keypress",handleInputKeyPress);
         document.addEventListener("click", handleClickListener);
     }
-    initializeApp();
-})();
+
+    initializeApp()
+
+    return  {
+        initilize: initializeApp,
+        authorName: authorName,
+    };
+})()
 
 
