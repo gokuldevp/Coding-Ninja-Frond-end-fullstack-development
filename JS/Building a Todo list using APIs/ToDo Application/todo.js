@@ -5,18 +5,29 @@ const tasksCounter = document.getElementById('tasks-counter');
 
 console.log('Working');
 
-let fetchToDos = () => {
-    // GET Requret
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then((response) => {
-        return response.json();
-    }).then((data) => {
-        tasks = data.slice(0, 20);
-        renderList()
-    }).catch((error) => {
-        console.log(error);
-    })
+// let fetchToDos = () => {
+//     // GET Requret
+//     fetch('https://jsonplaceholder.typicode.com/todos')
+//     .then((response) => {
+//         return response.json();
+//     }).then((data) => {
+//         tasks = data.slice(0, 20);
+//         renderList()
+//     }).catch((error) => {
+//         console.log(error);
+//     })
+// }
 
+let fetchToDos = async () => {
+    // GET Requret using async await
+    try {
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        let data = await response.json();
+        tasks = data.slice(0, 20);       
+        renderList()   
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 let addTaskToDOM = (task) => {
@@ -64,14 +75,29 @@ function deleteTask(taskId) {
     showNotification("A Task has been removed from the list");
 }
 
-function addTask (task) {
-    // Function to add a new task to the list
-    if(task){
-        tasks.push(task);
-        renderList();
-        showNotification("Task '" + task.title + "' is added to the list.")
-        tasksCounter.innerText = tasks.length
+async function addTask (task) {
+    // Function to add a new task to the list, this won't work currently as post is not part of the given api
+    try {
+        if(task){
+            const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+                method: "POST", // or 'PUT'
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              });
+    
+            const result = await response.json();
+            console.log("Success:", result);
+            // tasks.push(task);
+            renderList();
+            showNotification("Task '" + task.title + "' is added to the list.")
+            tasksCounter.innerText = tasks.length
+        }
+    } catch (error) {
+        console.error("Error:", error);
     }
+
 }
 
 function showNotification(text) {
